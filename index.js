@@ -26,7 +26,10 @@ connectToMongoDB(url)
 app.use(express.json())   
 //......................................
 
-
+const corsOptions = {
+    origin: process.env.MAIN_URL,
+    credentials: true, 
+}
 
 app.use(cors());
  
